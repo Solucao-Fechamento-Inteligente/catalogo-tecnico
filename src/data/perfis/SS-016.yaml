@@ -1,0 +1,19 @@
+codigo: SS-016
+descricao: Montante de Giro Esquerdo
+categorias:
+- portas-robustas
+- pele-vidro
+peso_kg_m: 0.876
+superficie_area_mm2_mml: 323.1
+superficie_perimetro_mm2_mml: 429.92
+inercia_jx_mm4: 87525.16
+inercia_jy_mm4: 71528.0
+largura_ref_mm: 49.2
+altura_ref_mm: 44
+barra_ref: BR-6,5MT
+imagem_desenho: SS-016-montante-de-giro-esquerdo.png
+imagem_isometrica: SS-016-montante-de-giro-esquerdo-isometrico.png
+status: completo
+nota: Tabela-resumo (mapa-mestre) antiga registrava 0,817 kg/m para este código; a
+  ficha técnica individual — fonte de verdade — registra 0,876 kg/m. Divergência preservada
+  aqui para revisão futura.

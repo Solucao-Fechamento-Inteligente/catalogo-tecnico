@@ -1,0 +1,14 @@
+{% for tabela in b.tabelas %}
+<table class="limits" style="margin-bottom:28px;">
+  <caption>{{ tabela.caption }}</caption>
+  <thead><tr>{% for col in tabela.colunas %}<th>{{ col }}</th>{% endfor %}</tr></thead>
+  <tbody>
+    {% for row in tabela.linhas %}
+    <tr><td class="metric">{{ row[0] }}</td>{% for val in row[1:] %}<td class="val">{{ val }}</td>{% endfor %}</tr>
+    {% endfor %}
+    {% if tabela.linha_final_colspan %}
+    <tr><td class="metric">{{ tabela.linha_final_colspan[0] }}</td><td class="val" colspan="{{ tabela.colunas|length - 1 }}">{{ tabela.linha_final_colspan[1] }}</td></tr>
+    {% endif %}
+  </tbody>
+</table>
+{% endfor %}

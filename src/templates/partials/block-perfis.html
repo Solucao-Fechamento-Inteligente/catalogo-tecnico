@@ -1,0 +1,50 @@
+{% if b.ficha_destaque %}
+{% set fp = perfis[b.ficha_destaque] %}
+<div class="spec-sheet">
+  <div class="spec-sheet-top">
+    <div>
+      <div class="id">{{ fp.codigo }}</div>
+      <div class="name">{{ fp.descricao }}</div>
+    </div>
+    <span class="badge" style="border-color:#6B7280; color:#5B6470;">ficha completa{{ " — perfil compartilhado" if fp.categorias|length > 1 else "" }}</span>
+  </div>
+  <div class="spec-sheet-body">
+    <div class="spec-sheet-img">
+      {% if fp.imagem_desenho %}<img src="{{ base_url }}assets/img/perfis/{{ fp.imagem_desenho }}" alt="Desenho técnico cotado — {{ fp.codigo }}">{% endif %}
+    </div>
+    <div class="spec-props">
+      <table>
+        <tr><td>Peso</td><td>{{ fp.peso_kg_m|br_num }} kg/m</td></tr>
+        {% if fp.superficie_area_mm2_mml %}<tr><td>Superfície — área</td><td>{{ fp.superficie_area_mm2_mml|br_num }} mm²/mml</td></tr>{% endif %}
+        {% if fp.superficie_perimetro_mm2_mml %}<tr><td>Superfície — perímetro</td><td>{{ fp.superficie_perimetro_mm2_mml|br_num }} mm²/mml</td></tr>{% endif %}
+        {% if fp.inercia_jx_mm4 %}<tr><td>Inércia Jx</td><td>{{ fp.inercia_jx_mm4|br_num }} mm⁴</td></tr>{% endif %}
+        {% if fp.inercia_jy_mm4 %}<tr><td>Inércia Jy</td><td>{{ fp.inercia_jy_mm4|br_num }} mm⁴</td></tr>{% endif %}
+        {% if fp.largura_ref_mm %}<tr><td>Largura de referência</td><td>{{ fp.largura_ref_mm|br_num }} mm</td></tr>{% endif %}
+        {% if fp.altura_ref_mm %}<tr><td>Altura de referência</td><td>{{ fp.altura_ref_mm|br_num }} mm</td></tr>{% endif %}
+      </table>
+      {% if fp.imagem_isometrica %}
+      <div class="spec-render">
+        <img src="{{ base_url }}assets/img/perfis/{{ fp.imagem_isometrica }}" alt="Vista isométrica — {{ fp.codigo }}">
+        <div class="cap">VISTA ISOMÉTRICA · referência de apresentação</div>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+{% if fp.nota %}<p style="font-size:12px; color:var(--steel); margin-bottom:16px;">{{ fp.nota }}</p>{% endif %}
+{% endif %}
+
+{% for grupo in b.grupos %}
+{% if grupo.label %}<p style="font-size:12.5px; color:var(--steel); margin-bottom:12px; font-weight:600;">{{ grupo.label }}</p>{% endif %}
+<div class="profiles-grid" style="margin-bottom:24px;">
+  {% for codigo in grupo.codigos %}
+  {% set p = perfis[codigo] %}
+  <a class="profile-card" href="{{ base_url }}biblioteca-perfis.html#{{ codigo }}">
+    <div class="pcode">{{ codigo }}</div>
+    {% if p.descricao %}<div class="pdesc">{{ p.descricao }}</div>{% endif %}
+    {% if p.categorias|length > 1 %}<span class="pshared">compartilhado</span>{% endif %}
+    {% if p.peso_kg_m %}<div class="pweight">{{ p.peso_kg_m|br_num }} kg/m{{ " · " ~ p.barra_ref if p.barra_ref else "" }}</div>{% endif %}
+  </a>
+  {% endfor %}
+</div>
+{% endfor %}

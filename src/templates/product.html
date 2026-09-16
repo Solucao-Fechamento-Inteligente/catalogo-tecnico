@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="product" id="produto">
+
+  <div class="product-hero">
+    <div class="product-kicker"><span class="ln"></span>Sistema {{ "%02d"|format(categoria.ordem) }} de {{ "%02d"|format(total_categorias) }}</div>
+    <h2>{{ produto.nome }}</h2>
+    {% if produto.nota %}<p class="former-name">{{ produto.nota }}</p>{% endif %}
+    {% if produto.subtitulo %}<p class="former-name"><b>{{ produto.subtitulo }}</b></p>{% endif %}
+    <p class="product-lede">{{ categoria.lede }}</p>
+    <div class="product-badges">
+      {% for b in categoria.badges %}<span class="badge">{{ b }}</span>{% endfor %}
+    </div>
+  </div>
+
+  <nav class="section-nav">
+    {% for b in categoria.blocks %}
+    <a href="#{{ slug }}-{{ b.id }}"{{ ' class="current"' if loop.first else '' }}>{{ b.titulo }}</a>
+    {% endfor %}
+  </nav>
+
+  {% for b in categoria.blocks %}
+  <div class="block" id="{{ slug }}-{{ b.id }}"{{ ' style="background:var(--paper-alt);"' if loop.index is even else '' }}>
+    <div class="block-head">
+      <h3><span class="idx">{{ loop.index }}</span>{{ b.titulo }}</h3>
+      {% if b.status %}<span class="status {{ b.status }}">{{ b.status_label or ("a preencher" if b.status == "pending" else "") }}</span>{% endif %}
+      {% if b.nota %}<span class="block-note">{{ b.nota }}</span>{% endif %}
+    </div>
+
+    {% if b.tipo == "diff_grid" %}{% include "partials/block-tipologia.html" %}
+    {% elif b.tipo == "limits_table" %}{% include "partials/block-limites.html" %}
+    {% elif b.tipo == "profiles" %}{% include "partials/block-perfis.html" %}
+    {% elif b.tipo == "placeholder" %}{% include "partials/block-placeholder.html" %}
+    {% elif b.tipo == "cert_strip" %}{% include "partials/block-cert.html" %}
+    {% elif b.tipo == "fabric_tables" %}{% include "partials/block-tecidos.html" %}
+    {% endif %}
+  </div>
+  {% endfor %}
+
+</section>
+{% endblock %}

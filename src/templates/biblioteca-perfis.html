@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="product" id="biblioteca-perfis">
+
+  <div class="product-hero">
+    <div class="product-kicker"><span class="ln"></span>Referência técnica</div>
+    <h2>Mapa geral de perfis</h2>
+    <p class="product-lede">{{ biblioteca.intro }}</p>
+  </div>
+
+  <div class="block" id="bib-mapa">
+    <div class="block-head">
+      <h3><span class="idx">1</span>Relação de peças — desenho mestre</h3>
+      <span class="block-note">Fonte: {{ biblioteca.fonte_desenho_mestre }}</span>
+    </div>
+    <div class="master-map">
+      <img src="{{ base_url }}assets/img/biblioteca/{{ biblioteca.imagem }}" alt="Relação de peças — desenho mestre">
+    </div>
+  </div>
+
+  <div class="block" id="bib-index" style="background:var(--paper-alt);">
+    <div class="block-head">
+      <h3><span class="idx">2</span>Índice de compartilhamento entre produtos</h3>
+    </div>
+    <table class="limits">
+      <caption>Onde cada grupo de perfil é usado</caption>
+      <thead><tr><th>Códigos</th><th>Usado em</th></tr></thead>
+      <tbody>
+        {% for grupo in grupos_compartilhamento %}
+        <tr><td class="metric">{{ grupo.codigos|join(", ") }}</td><td class="val">{{ grupo.categorias|join(" + ") }}{{ " (exclusivo)" if grupo.categorias|length == 1 else " (compartilhado)" }}</td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  <div class="block" id="bib-status">
+    <div class="block-head">
+      <h3><span class="idx">3</span>Fichas técnicas individuais</h3>
+      <span class="block-note">{{ perfis_completos|length }} de {{ perfis|length }} perfis com ficha completa</span>
+    </div>
+
+    {% for codigo, fp in perfis.items() if fp.status == "completo" %}
+    <div class="spec-sheet" id="{{ codigo }}">
+      <div class="spec-sheet-top">
+        <div>
+          <div class="id">{{ fp.codigo }}</div>
+          <div class="name">{{ fp.descricao }}</div>
+        </div>
+        <span class="badge" style="border-color:#6B7280; color:#5B6470;">{{ "compartilhado entre " ~ (fp.categorias|map('categoria_titulo')|join(" e ")) if fp.categorias|length > 1 else "exclusivo — " ~ (fp.categorias|map('categoria_titulo')|join("")) }}</span>
+      </div>
+      <div class="spec-sheet-body">
+        <div class="spec-sheet-img">
+          {% if fp.imagem_desenho %}<img src="{{ base_url }}assets/img/perfis/{{ fp.imagem_desenho }}" alt="Desenho técnico cotado — {{ fp.codigo }}">{% endif %}
+        </div>
+        <div class="spec-props">
+          <table>
+            <tr><td>Peso</td><td>{{ fp.peso_kg_m|br_num }} kg/m</td></tr>
+            {% if fp.superficie_area_mm2_mml %}<tr><td>Superfície — área</td><td>{{ fp.superficie_area_mm2_mml|br_num }} mm²/mml</td></tr>{% endif %}
+            {% if fp.superficie_perimetro_mm2_mml %}<tr><td>Superfície — perímetro</td><td>{{ fp.superficie_perimetro_mm2_mml|br_num }} mm²/mml</td></tr>{% endif %}
+            {% if fp.inercia_jx_mm4 %}<tr><td>Inércia Jx</td><td>{{ fp.inercia_jx_mm4|br_num }} mm⁴</td></tr>{% endif %}
+            {% if fp.inercia_jy_mm4 %}<tr><td>Inércia Jy</td><td>{{ fp.inercia_jy_mm4|br_num }} mm⁴</td></tr>{% endif %}
+            {% if fp.largura_ref_mm %}<tr><td>Largura de referência</td><td>{{ fp.largura_ref_mm|br_num }} mm</td></tr>{% endif %}
+            {% if fp.altura_ref_mm %}<tr><td>Altura de referência</td><td>{{ fp.altura_ref_mm|br_num }} mm</td></tr>{% endif %}
+          </table>
+          {% if fp.imagem_isometrica %}
+          <div class="spec-render">
+            <img src="{{ base_url }}assets/img/perfis/{{ fp.imagem_isometrica }}" alt="Vista isométrica — {{ fp.codigo }}">
+            <div class="cap">VISTA ISOMÉTRICA · referência de apresentação</div>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    {% if fp.nota %}<p style="font-size:12px; color:var(--steel); margin-bottom:24px;">{{ fp.nota }}</p>{% endif %}
+    {% endfor %}
+
+    <p style="font-size:12.5px; color:var(--steel); margin:8px 0 16px;">Demais perfis — aguardando ficha técnica individual:</p>
+    <div class="profiles-grid">
+      {% for codigo, fp in perfis.items() if fp.status != "completo" %}
+      <div class="profile-card" id="{{ codigo }}">
+        <div class="pcode">{{ codigo }}</div>
+        {% if fp.descricao %}<div class="pdesc">{{ fp.descricao }}</div>{% endif %}
+        {% if fp.peso_kg_m %}<div class="pweight">{{ fp.peso_kg_m|br_num }} kg/m{{ " · " ~ fp.barra_ref if fp.barra_ref else "" }}</div>{% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+</section>
+{% endblock %}

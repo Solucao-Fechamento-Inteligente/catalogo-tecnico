@@ -1,0 +1,55 @@
+solucao:
+  slug: solucao
+  label: "Solução"
+  brand_mark: "SOLUÇÃO"
+  brand_sub: "Fechamento Inteligente"
+  color: "#0077B6"
+  color_ink: "#004C73"
+  tint: "#E7F3FA"
+  produtos:
+    sacada:
+      nome: "Solução Sacadas"
+      page_slug: sacada
+    portas-minimalistas:
+      nome: "MWO"
+      subtitulo: "Minimalist Wide Opening System"
+      page_slug: mwo
+    portas-robustas:
+      nome: "BigSpace"
+      page_slug: bigspace
+    pele-vidro:
+      nome: "SkinGlass"
+      page_slug: skinglass
+    ripado:
+      nome: "Ripado"
+      page_slug: ripado
+    persianas:
+      nome: "Persianas Integradas"
+      page_slug: persianas
+
+blindex:
+  slug: blindex
+  label: "Blindex"
+  brand_mark: "BLINDEX"
+  brand_sub: "Licenciado Solução Fechamento Inteligente"
+  color: "#C41E2A"
+  color_ink: "#8F1620"
+  tint: "#FBE9EA"
+  produtos:
+    sacada:
+      nome: "Blindex Sacadas"
+      page_slug: sacadas
+      nota: "Também referido como Solução Sacadas nos materiais comerciais anteriores."
+    portas-minimalistas:
+      nome: "Unique"
+      page_slug: unique
+      nota: "Nome técnico de origem: MWO — Minimalist Wide Opening System."
+    portas-robustas:
+      nome: "Vista"
+      page_slug: vista
+      nota: "Nome técnico de origem: BigSpace — grandes vãos."
+    pele-vidro:
+      nome: "Skin Vista"
+      page_slug: skin-vista
+      nota: "Nome técnico de origem: SkinGlass — pele de vidro."
+    # ripado e persianas ausentes de propósito — não existem sob a marca Blindex

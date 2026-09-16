@@ -1,0 +1,9 @@
+<div class="diff-grid">
+  {% for item in b.itens %}
+  <div class="diff-card">
+    <div class="n">{{ "%02d"|format(loop.index) }}</div>
+    <h4>{{ item.titulo }}</h4>
+    <p>{{ item.texto }}</p>
+  </div>
+  {% endfor %}
+</div>

@@ -1,0 +1,88 @@
+slug: pele-vidro
+titulo: Pele de vidro
+nav_group: Grandes vãos e pele de vidro
+ordem: 4
+lede: 'Inspirado em grandes fachadas comerciais, traz para projetos residenciais a estética de uma parede contínua de vidro — mas com abertura total. Diferente de soluções Maxim-Ar, não restringe o vão: fechado, parece pele de vidro; aberto, garante 100% de aproveitamento. Homologado para aplicações de até 30 andares.'
+badges:
+- Exclusividade Solução
+- Homologado até 30 andares
+- Fachada Estrutural Glazing
+blocks:
+- id: tipologia
+  tipo: diff_grid
+  titulo: Tipologia e diferenciais
+  status: ready
+  status_label: conteúdo consolidado
+  itens:
+  - titulo: 100% vidro, abertura total
+    texto: 'Não é sistema Maxim-Ar: abre horizontalmente, como se o vão fosse totalmente livre — folhas mantêm a mesma modulação da pele de vidro.'
+  - titulo: Abertura híbrida
+    texto: Empilhamento de vidro configurável pelo usuário, inclusive em vãos com formato "L" ou "U".
+  - titulo: Vedação em 4 barreiras + dreno
+    texto: Vedação com borracha e escovinhas, sistema exclusivo de dreno interno — estanqueidade total contra intempéries.
+  - titulo: Homologado até 30 andares
+    texto: Testado e homologado pelo Instituto Falcão Bauer para aplicações de alta exigência estrutural.
+  - titulo: Fachada Estrutural Glazing
+    texto: Único sistema com abertura total nesse formato de fachada — vista limpa, sem interrupção visual do vidro.
+- id: limites
+  tipo: limits_table
+  titulo: Limites e dados técnicos
+  status: ready
+  status_label: dados de campo confirmados
+  caption: Limites dimensionais e de carga
+  linhas:
+  - - Largura máxima do vão
+    - Sem limite
+  - - Altura máxima do vão
+    - Até 1500mm (requer indicação de paginação)
+  - - Quantidade de folhas
+    - Sem limite (ideal até 7 pares por empilhamento)
+  - - Largura máxima da folha
+    - 1200mm (ideal ~700mm) — respeitar aproveitamento de chapa (±1200mm largura/altura)
+  - - Peso do vidro — 8mm
+    - 20 kg/m²
+  - - Peso do alumínio
+    - 5 kg/m × perímetro
+  dados_orcamento:
+  - Largura do vão
+  - Altura do vão
+  - Nº de folhas móveis e fixas
+  - Cor do vidro
+  - Cor do alumínio
+- id: perfis
+  tipo: profiles
+  titulo: Perfis utilizados
+  nota: 5 perfis compartilhados com a categoria portas robustas (SS-014/015/016/017/024) + 9 perfis exclusivos de fechamento.
+  grupos:
+  - label: Compartilhados com portas robustas
+    codigos:
+    - SS-014
+    - SS-015
+    - SS-016
+    - SS-017
+    - SS-024
+  - label: Exclusivos
+    codigos:
+    - SS-025
+    - SS-026
+    - SS-027
+    - SS-028
+    - FE-0202
+    - FE-0203
+    - FE-0204
+    - FE-0205
+    - FE-0207
+- id: montagem
+  tipo: placeholder
+  titulo: Detalhe de montagem
+  status: pending
+  icone: ↳
+  subtitulo: Sequência de montagem em elaboração
+  texto: Passo a passo de instalação da fachada glazing e travamento das folhas será adicionado conforme desenhos liberados.
+- id: usinagem
+  tipo: placeholder
+  titulo: Detalhe de usinagem
+  status: pending
+  icone: ⌀
+  subtitulo: Especificações de corte e furação em elaboração
+  texto: Cotas de corte e furação por perfil serão adicionadas nesta seção.

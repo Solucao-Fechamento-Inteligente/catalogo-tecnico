@@ -1,0 +1,103 @@
+slug: sacada
+titulo: Sacada
+nav_group: Sistemas de sacada
+ordem: 1
+lede: Sistema de envidraçamento de sacadas desenvolvido a partir da NBR 16259/2014 — a norma definiu o produto, não o contrário. Eleito por dois anos consecutivos o melhor sistema do Sul do Brasil, une segurança, praticidade de manuseio e vedação superior em um sistema híbrido testado e homologado.
+badges:
+- NBR 16259/2014
+- 5 anos de garantia
+- Instituto Falcão Bauer
+- Melhor sistema do Sul — 2022
+blocks:
+- id: tipologia
+  tipo: diff_grid
+  titulo: Tipologia e diferenciais
+  status: ready
+  status_label: conteúdo consolidado
+  itens:
+  - titulo: Norma primeiro, produto depois
+    texto: Desenvolvido a partir dos critérios técnicos da NBR 16259/2014, e não adaptado a ela a posteriori — garante conformidade e segurança absoluta desde a concepção.
+  - titulo: Travamento múltiplo
+    texto: Elimina a sensação de queda do vidro por meio de travamentos que impedem o desencaixe e garantem estabilidade da folha.
+  - titulo: Vedação em 4 barreiras + dreno
+    texto: Mecanismo exclusivo de vedação contra chuva e vento, com quatro barreiras superiores e sistema de dreno interno próprio.
+  - titulo: Acabamento anti-corte
+    texto: Perfis internos cortados a 90°, sem alumínio exposto ou cortante — reduz risco de acidente na instalação e no uso.
+  - titulo: Leveza de manuseio
+    texto: Projetado para ser operado com facilidade mesmo por idosos, crianças ou pessoas de baixa estatura.
+  - titulo: Ferragens 100% inox
+    texto: Perfis superiores robustos e inferiores leves; trilho slim de 38mm de altura — mais área de vidro, menos alumínio aparente.
+- id: limites
+  tipo: limits_table
+  titulo: Limites e dados técnicos
+  status: ready
+  status_label: dados de campo confirmados
+  caption: Limites dimensionais e de carga
+  linhas:
+  - - Largura máxima do vão
+    - Sem limite
+  - - Altura máxima do vão
+    - 8mm até 1600mm · 10 e 12mm até 2600mm
+  - - Quantidade de folhas
+    - Sem limite (ideal até 12 folhas por empilhamento)
+  - - Largura máxima da folha
+    - 810mm (ideal ~550mm)
+  - - Peso do vidro — 8mm
+    - 20 kg/m²
+  - - Peso do vidro — 10mm
+    - 25 kg/m²
+  - - Peso do vidro — 12mm
+    - 30 kg/m²
+  dados_orcamento:
+  - Largura do vão
+  - Altura do vão
+  - Quantidade de folhas
+  - Cor do vidro
+  - Cor do alumínio
+- id: perfis
+  tipo: profiles
+  titulo: Perfis utilizados
+  nota: 14 perfis próprios (SS-001 a SS-013, LT-077). Fichas completas na biblioteca de perfis — ver seção de referência ao final do catálogo.
+  grupos:
+  - label: null
+    codigos:
+    - SS-001
+    - SS-002
+    - SS-003
+    - SS-004
+    - SS-005
+    - SS-006
+    - SS-007
+    - SS-008
+    - SS-009
+    - SS-010
+    - SS-011
+    - SS-012
+    - SS-013
+    - LT-077
+- id: montagem
+  tipo: placeholder
+  titulo: Detalhe de montagem
+  status: pending
+  icone: ↳
+  subtitulo: Sequência de montagem em elaboração
+  texto: 'Esta seção receberá o passo a passo ilustrado de instalação (fixação de trilhos, colagem, encaixe de folhas e travamento) conforme os desenhos forem liberados. Estrutura de exibição: etapas numeradas, uma imagem por etapa.'
+- id: usinagem
+  tipo: placeholder
+  titulo: Detalhe de usinagem
+  status: pending
+  icone: ⌀
+  subtitulo: Especificações de corte e furação em elaboração
+  texto: Cotas de corte, furação e rebaixo por perfil (referenciando os códigos SS-001 a SS-013) serão adicionadas aqui, no formato de ficha técnica com cotas — mesmo padrão da ficha de perfil.
+- id: cert
+  tipo: cert_strip
+  titulo: Certificações e testes
+  itens:
+  - codigo: IF
+    texto: Instituto Falcão Bauer — pressão de vento, impacto de corpo mole, ciclos de abertura
+  - codigo: ✓
+    texto: NBR 16259/2014 — 100% atendida
+  - codigo: 5a
+    texto: 5 anos de garantia de sistema
+  - codigo: ISO
+    texto: ISO 9001

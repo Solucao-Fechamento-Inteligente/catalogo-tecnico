@@ -1,0 +1,77 @@
+slug: portas-minimalistas
+titulo: Portas minimalistas
+nav_group: Portas de grandes vãos
+ordem: 2
+lede: Sistema desenvolvido para suprir a lacuna do mercado em portas de grandes dimensões — onde modelos tradicionais exigem múltiplos trilhos e nunca abrem o vão por completo. Trabalha em um único trilho, com folhas de até 4 metros de altura e perfil minimalista que funciona como o próprio puxador.
+badges:
+- Trilho único
+- Até 3500mm de altura
+- Abertura híbrida multidirecional
+blocks:
+- id: tipologia
+  tipo: diff_grid
+  titulo: Tipologia e diferenciais
+  status: ready
+  status_label: conteúdo consolidado
+  itens:
+  - titulo: Perfil como puxador
+    texto: O próprio perfil funciona como puxador, dispensando ferragem adicional e evitando marcas de dedo no vidro.
+  - titulo: Trilho único
+    texto: Opera em um único trilho, unindo design minimalista, alta estanqueidade e robustez comprovada em vãos largos.
+  - titulo: Abertura em qualquer direção
+    texto: O usuário decide o lado de abertura — inclusive com aberturas intercaladas — sem restrição de layout.
+  - titulo: Trilho inferior de polímero
+    texto: Apenas 23mm de altura, alta resistência, embutido ou sobreposto — suporta inclusive passagem de carro por cima.
+  - titulo: Aplicação versátil
+    texto: Além de portas de grande vão, pode ser aplicado em janelas e varandas.
+  - titulo: Prolongador de correção
+    texto: Corrige desnível de viga em até 40mm na parte superior da instalação.
+- id: limites
+  tipo: limits_table
+  titulo: Limites e dados técnicos
+  status: ready
+  status_label: dados de campo confirmados
+  caption: Limites dimensionais e de carga
+  linhas:
+  - - Largura máxima do vão
+    - Sem limite
+  - - Altura máxima do vão
+    - Até 3500mm (somente vidro 10mm)
+  - - Quantidade de folhas
+    - Sem limite (ideal até 10 pares por empilhamento)
+  - - Largura máxima da folha
+    - 1200mm (ideal ~800mm)
+  - - Peso do vidro — 10mm
+    - 25 kg/m²
+  dados_orcamento:
+  - Largura do vão
+  - Altura do vão
+  - Quantidade de folhas
+  - Cor do vidro
+  - Cor do alumínio
+- id: perfis
+  tipo: profiles
+  titulo: Perfis utilizados
+  nota: 5 perfis próprios (SS-020 a SS-023, F98). Fichas técnicas individuais a alimentar.
+  grupos:
+  - label: null
+    codigos:
+    - SS-020
+    - SS-021
+    - SS-022
+    - SS-023
+    - F98
+- id: montagem
+  tipo: placeholder
+  titulo: Detalhe de montagem
+  status: pending
+  icone: ↳
+  subtitulo: Sequência de montagem em elaboração
+  texto: Passo a passo de instalação do trilho único e encaixe das folhas será adicionado conforme desenhos liberados.
+- id: usinagem
+  tipo: placeholder
+  titulo: Detalhe de usinagem
+  status: pending
+  icone: ⌀
+  subtitulo: Especificações de corte e furação em elaboração
+  texto: Cotas de corte e furação por perfil (SS-020 a SS-023, F98) serão adicionadas nesta seção.

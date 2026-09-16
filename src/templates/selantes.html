@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="product" id="selantes">
+
+  <div class="product-hero">
+    <div class="product-kicker"><span class="ln"></span>{{ selantes.kicker }}</div>
+    <h2>{{ selantes.titulo }}</h2>
+    <p class="product-lede">{{ selantes.lede }}</p>
+  </div>
+
+  <div class="block" id="sl-produtos">
+    <div class="block-head">
+      <h3><span class="idx">1</span>Produtos da linha</h3>
+    </div>
+    <div class="sealant-grid">
+      {% for p in selantes.produtos %}
+      <div class="sealant-card">
+        {% if p.tag %}<span class="stag">{{ p.tag }}</span>{% endif %}
+        <h4>{{ p.nome }}</h4>
+        <p>{{ p.texto }}</p>
+        <div class="pack">{{ p.pack }}</div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+</section>
+{% endblock %}

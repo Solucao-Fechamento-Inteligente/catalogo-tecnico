@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ page_title }} — Catálogo Técnico Solução</title>
+<link rel="stylesheet" href="{{ base_url }}assets/css/catalogo.css">
+{% if pc %}
+<style>:root{ --pc:{{ pc }}; --tint:{{ tint }}; --brand:{{ pc }}; }</style>
+{% endif %}
+</head>
+<body>
+<div class="shell">
+
+  <nav class="sidebar">
+    <div class="brand-block">
+      <div class="brand-mark">{{ sidebar_marca.brand_mark if sidebar_marca else "CATÁLOGO TÉCNICO" }}</div>
+      <div class="brand-sub">{{ sidebar_marca.brand_sub if sidebar_marca else "Solução Fechamento Inteligente" }}</div>
+      <span class="brand-tag">CATÁLOGO TÉCNICO — v0.2</span>
+      {% if marcas_ativas|length > 1 %}
+      <div class="brand-switch">
+        {% for m in marcas_ativas %}
+        <a href="{{ base_url }}{{ 'index.html' if m == 'solucao' else 'blindex/index.html' }}" class="{{ 'current' if m == marca_slug else '' }}">{{ marcas[m].label }}</a>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+
+    <a href="{{ base_url }}{{ 'index.html' if marca_slug == 'solucao' or not marca_slug else 'blindex/index.html' }}" class="nav-product" style="--dot-color:#8FA3B0;"><span class="dot" style="background:#8FA3B0;"></span>Início</a>
+
+    {% for group_name, cats in nav_groups.items() %}
+    <div class="nav-group">
+      <div class="nav-group-label">{{ group_name }}</div>
+      {% for cat in cats %}
+        {% set produto = marcas[marca_slug].produtos.get(cat.slug) if marca_slug else None %}
+        {% if produto %}
+        <a href="{{ base_url }}{{ marca_slug }}/{{ produto.page_slug }}.html" class="nav-product{{ ' active' if current_page == (marca_slug ~ '/' ~ produto.page_slug ~ '.html') else '' }}" style="--dot-color:{{ pc }};"><span class="dot" style="background:{{ pc }};"></span>{{ produto.nome }}</a>
+        {% endif %}
+      {% endfor %}
+    </div>
+    {% endfor %}
+
+    <div class="nav-group">
+      <div class="nav-group-label">Referência</div>
+      <a href="{{ base_url }}biblioteca-perfis.html" class="nav-product{{ ' active' if current_page == 'biblioteca-perfis.html' else '' }}" style="--dot-color:#5B6470;"><span class="dot" style="background:#5B6470;"></span>Mapa geral de perfis</a>
+      <a href="{{ base_url }}selantes.html" class="nav-product{{ ' active' if current_page == 'selantes.html' else '' }}" style="--dot-color:#C41E2A;"><span class="dot" style="background:#C41E2A;"></span>Linha de Selantes</a>
+    </div>
+  </nav>
+
+  <main class="main">
+    {% block content %}{% endblock %}
+
+    <footer class="doc-footer">
+      <div class="fbrand">SOLUÇÃO · FECHAMENTO INTELIGENTE</div>
+      <p class="fmeta">Empresa licenciada Blindex® para soluções de envidraçamento de sacadas, grandes vãos e pele de vidro. Sistemas homologados pelo Instituto Falcão Bauer, certificação ISO 9001 e ABNT.</p>
+      <p class="fcontact">(48) 3241-0555 · (48) 99207-2442 · solucaosacadas.com.br</p>
+    </footer>
+  </main>
+</div>
+<script src="{{ base_url }}assets/js/nav.js"></script>
+</body>
+</html>

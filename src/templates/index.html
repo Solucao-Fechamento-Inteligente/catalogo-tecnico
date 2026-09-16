@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="cover" id="capa">
+  <div class="cover-eyebrow">Documento técnico interno &nbsp;·&nbsp; <b>Solução Fechamento Inteligente</b> &nbsp;·&nbsp; Rev. 0.2 — modelo de trabalho</div>
+  <h1>Catálogo técnico de sistemas de envidraçamento</h1>
+  <p class="cover-desc">Especificação de tipologia, limites dimensionais, perfis de alumínio, montagem e usinagem para os sistemas produzidos pela Solução, sob licença Blindex®. Documento vivo — construído por seções, alimentado à medida que novos desenhos técnicos são liberados.</p>
+
+  <div class="cover-meta">
+    <div><div class="num">{{ produtos|length }}</div><div class="lbl">sistemas mapeados</div></div>
+    <div><div class="num">{{ total_perfis }}+</div><div class="lbl">perfis catalogados</div></div>
+    <div><div class="num">15</div><div class="lbl">anos de sistema</div></div>
+  </div>
+
+  <div class="cover-index">
+    {% for p in produtos %}
+    <a href="{{ base_url }}{{ marca_slug }}/{{ p.page_slug }}.html"><span class="sw" style="background:{{ pc }};"></span>{{ p.nome }}</a>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}

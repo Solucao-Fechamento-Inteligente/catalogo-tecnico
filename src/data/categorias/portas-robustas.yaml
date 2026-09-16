@@ -1,0 +1,80 @@
+slug: portas-robustas
+titulo: Portas robustas
+nav_group: Grandes vãos e pele de vidro
+ordem: 3
+lede: 'Sistema que combina estética e robustez: visto pelo lado externo, o resultado se aproxima de uma pele de vidro contínua. Funciona em pares sobre um único trilho, permitindo projetos de até 10 metros de largura com abertura lateral, central ou pivotante.'
+badges:
+- Exclusividade Solução
+- Até 4500mm de altura
+- Até 10m de largura por trilho
+blocks:
+- id: tipologia
+  tipo: diff_grid
+  titulo: Tipologia e diferenciais
+  status: ready
+  status_label: conteúdo consolidado
+  itens:
+  - titulo: Abertura híbrida
+    texto: O usuário escolhe onde empilhar o vidro, mesmo em vãos com formato "L" ou "U" — versatilidade total de layout.
+  - titulo: Trilho único, vários vidros
+    texto: Pares de folhas operam sobre um único trilho, permitindo vãos de até 10 metros de largura de forma prática.
+  - titulo: Sem alumínio na vista frontal
+    texto: 'Elegância visual: o perfil praticamente desaparece na composição frontal do envidraçamento.'
+  - titulo: Vedação ultra eficiente
+    texto: Borracha e escovinhas em múltiplas barreiras — alta eficiência contra vento, chuva e sujeira.
+  - titulo: Cremona e fecho-unha
+    texto: Trava entre vidros que garante segurança total, mesmo em aplicações de alta exigência arquitetônica.
+  - titulo: Trilho de alta resistência
+    texto: Suporta passagem de carro sobre o trilho inferior — compatível com projetos que integram acesso veicular.
+- id: limites
+  tipo: limits_table
+  titulo: Limites e dados técnicos
+  status: ready
+  status_label: dados de campo confirmados
+  caption: Limites dimensionais e de carga
+  linhas:
+  - - Largura máxima do vão
+    - Sem limite
+  - - Altura máxima do vão
+    - Até 4500mm (vidro 8 ou 10mm, conforme norma)
+  - - Quantidade de folhas
+    - Sem limite (ideal até 7 pares por empilhamento)
+  - - Largura máxima da folha
+    - 1200mm (ideal ~800mm)
+  - - Peso do vidro — 8mm
+    - 20 kg/m²
+  - - Peso do vidro — 10mm
+    - 25 kg/m²
+  dados_orcamento:
+  - Largura do vão
+  - Altura do vão
+  - Nº de folhas móveis e fixas
+  - Cor do vidro
+  - Cor do alumínio
+- id: perfis
+  tipo: profiles
+  titulo: Perfis utilizados
+  nota: 5 perfis compartilhados com a categoria pele de vidro (SS-014, SS-015, SS-016, SS-017, SS-024).
+  grupos:
+  - label: null
+    codigos:
+    - SS-014
+    - SS-015
+    - SS-016
+    - SS-017
+    - SS-024
+  ficha_destaque: SS-016
+- id: montagem
+  tipo: placeholder
+  titulo: Detalhe de montagem
+  status: pending
+  icone: ↳
+  subtitulo: Sequência de montagem em elaboração
+  texto: Como os perfis SS-014 a SS-024 são compartilhados com a categoria pele de vidro, a montagem de base tende a ser muito similar entre os dois sistemas — a documentar em conjunto quando disponível.
+- id: usinagem
+  tipo: placeholder
+  titulo: Detalhe de usinagem
+  status: pending
+  icone: ⌀
+  subtitulo: Especificações de corte e furação em elaboração
+  texto: Cotas de corte e furação por perfil serão adicionadas nesta seção.

@@ -1,0 +1,19 @@
+<div class="limits-wrap">
+  <table class="limits">
+    <caption>{{ b.caption }}</caption>
+    <thead><tr><th>Parâmetro</th><th>Especificação</th></tr></thead>
+    <tbody>
+      {% for row in b.linhas %}
+      <tr><td class="metric">{{ row[0] }}</td><td class="val">{{ row[1] }}</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <div class="data-needed">
+    <h4>Dados necessários para orçamento</h4>
+    <ul>
+      {% for item in b.dados_orcamento %}
+      <li>{{ item }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>

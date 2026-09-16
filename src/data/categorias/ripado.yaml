@@ -1,0 +1,55 @@
+slug: ripado
+titulo: Ripado
+nav_group: Complementares
+ordem: 5
+lede: Sistema versátil e eficiente para fechamento de vãos e brises, com opções em lambril ou mucharabi. Une beleza, versatilidade e desempenho em vãos de até 6 metros de altura.
+badges:
+- Até 6m de altura
+- Lambril ou Mucharabi
+- Abertura híbrida ou pivotante
+blocks:
+- id: tipologia
+  tipo: diff_grid
+  titulo: Tipologia e diferenciais
+  status: ready
+  status_label: conteúdo consolidado
+  itens:
+  - titulo: Duas opções de acabamento
+    texto: Lambril (fechado) ou mucharabi (vazado), para atender ao estilo e à ventilação desejada em cada projeto.
+  - titulo: Abertura híbrida ou pivotante
+    texto: A abertura pode ser híbrida para os dois lados ou pivotante, conforme a necessidade do vão.
+  - titulo: Dobradiças de alta qualidade
+    texto: Mesmo padrão de dobradiça usado nas categorias portas robustas e portas minimalistas — leveza de manuseio mesmo em grandes dimensões.
+  - titulo: Redução de consumo energético
+    texto: Veda entrada de luminosidade excessiva, ajudando a reduzir o consumo de ar-condicionado no ambiente.
+- id: limites
+  tipo: limits_table
+  titulo: Limites e dados técnicos
+  status: ready
+  status_label: dados de campo confirmados
+  caption: Limites dimensionais e de carga
+  linhas:
+  - - Largura máxima do vão
+    - Sem limite
+  - - Altura máxima do vão
+    - Até 6000mm (requer dimensão do ripado e afastamento)
+  - - Quantidade de folhas
+    - Sem limite (ideal até 7 pares por empilhamento)
+  - - Largura máxima da folha
+    - 1000mm (ideal ~700mm)
+  - - Peso do ripado
+    - 3 kg/ml de estrutura
+  dados_orcamento:
+  - Largura do vão
+  - Altura do vão
+  - Nº de folhas móveis e fixas
+  - Cor do alumínio
+  - Dimensão do ripado e afastamento
+- id: perfis
+  tipo: placeholder
+  titulo: Perfis utilizados
+  status: pending
+  status_label: a mapear
+  icone: ⊞
+  subtitulo: Perfis ainda não mapeados no código-mestre
+  texto: Este sistema não aparece na relação de peças atual (SS-001 a SS-028 / FE-02XX). Trilho pode ser em alumínio ou polímero — códigos a confirmar e adicionar aqui.

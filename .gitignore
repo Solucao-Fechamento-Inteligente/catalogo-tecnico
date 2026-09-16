@@ -1,0 +1,15 @@
+# Referência bruta de CAD (DWG/SLDPRT/RAR) — mantida localmente, fora do Git
+/cad-fonte/
+
+# Scripts e arquivos temporários de trabalho
+/scratch/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# SO
+Thumbs.db
+.DS_Store

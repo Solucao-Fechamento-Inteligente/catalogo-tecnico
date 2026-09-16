@@ -1,0 +1,13 @@
+codigo: SS-001
+descricao: Trilho Inferior
+categorias:
+- sacada
+peso_kg_m: 0.683
+superficie_area_mm2_mml: 252.03
+superficie_perimetro_mm2_mml: 307.44
+inercia_jx_mm4: 23607.63
+inercia_jy_mm4: 62744.7
+largura_ref_mm: 41.95
+altura_ref_mm: 29.6
+imagem_desenho: SS-001-trilho-inferior.jpg
+status: completo

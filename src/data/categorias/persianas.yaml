@@ -1,0 +1,121 @@
+slug: persianas
+titulo: Persianas
+nav_group: Complementares
+ordem: 6
+lede: Sistema integrado de persianas, aplicável aos sistemas de envidraçamento de sacada sem danificar o conjunto e sem necessidade de adaptações. Garante mais privacidade, design interno e proteção contra os efeitos dos raios solares.
+badges:
+- Compatível com o sistema Sacadas
+- Estilo roló
+- Sem adaptação estrutural
+blocks:
+- id: tipologia
+  tipo: diff_grid
+  titulo: Tipologia e diferenciais
+  status: ready
+  status_label: conteúdo consolidado
+  itens:
+  - titulo: Persianas e cortinas
+    texto: Aplicação com variedade de cores e tecidos, integrada ao trilho do sistema de sacadas.
+  - titulo: Estilo roló
+    texto: Sistema de persiana roló, versátil e estiloso, com melhor adaptabilidade de instalação.
+  - titulo: Instalação com pouco espaço
+    texto: Sistema inteligente que permite instalação mesmo com pouco afastamento entre viga e laje.
+- id: limites
+  tipo: fabric_tables
+  titulo: Tecidos e propriedades técnicas
+  status: ready
+  status_label: tabela técnica completa — Screen Solflex
+  tabelas:
+  - caption: Cores disponíveis por fator de abertura
+    colunas:
+    - Cor
+    - 1% (coleção 206)
+    - 3% (coleção 207)
+    - 5% (coleção 229)
+    linhas:
+    - - Branco
+      - T1001 — 206-01
+      - T2001 — 207-01
+      - T3001 — 229-01
+    - - Bege
+      - T1002 — 206-02
+      - T2002 — 207-02
+      - T3002 — 229-02
+    - - Linen
+      - T1015 — 206-15
+      - T2015 — 207-15
+      - T3015 — 229-15
+    - - Cinza
+      - T1003 — 206-03
+      - T2003 — 207-03
+      - T3003 — 229-03
+    - - Prata
+      - T1004 — 206-04
+      - T1004 — 207-04
+      - T1004 — 229-04
+    - - Grafite
+      - T1005 — 206-05
+      - T1005 — 207-05
+      - T1005 — 229-05
+    - - Black White
+      - T1006 — 206-06
+      - T2006 — 207-06
+      - T3006 — 229-06
+    - - Brown
+      - T1008 — 206-08
+      - T1008 — 207-08
+      - T1008 — 229-08
+    - - Preto
+      - T1007 — 206-07
+      - T1007 — 207-07
+      - T1007 — 229-07
+  - caption: Propriedades técnicas do tecido
+    colunas:
+    - Propriedade
+    - T1000 (1%)
+    - T2000 (3%)
+    - T3000 (5%)
+    linhas:
+    - - Indicação
+      - Rolô, Romana, Painel
+      - Rolô, Romana, Painel
+      - Rolô, Romana, Painel
+    - - Largura máxima
+      - 300cm
+      - 300cm
+      - 300cm
+    - - Composição
+      - 30% poliéster / 70% PVC
+      - 30% poliéster / 70% PVC
+      - 30% poliéster / 70% PVC
+    - - Peso
+      - 480 g/m²
+      - 470 g/m²
+      - 410 g/m²
+    - - Espessura
+      - 0,68mm
+      - 0,58mm
+      - 0,55mm
+    - - Bloqueio de raios UV
+      - 99%
+      - 97%
+      - 95%
+    - - Retardante de chamas
+      - NFPA 701 (US)
+      - NFPA 701 (US)
+      - NFPA 701 (US)
+    - - Certificação ambiental
+      - OEXO TEX 100 Greenguard
+      - OEXO TEX 100 Greenguard
+      - OEXO TEX 100 Greenguard
+    linha_final_colspan:
+    - Limpeza
+    - Aspirador de pó para poeira; detergente neutro e água para o tecido
+- id: perfis
+  tipo: profiles
+  titulo: Perfis utilizados
+  nota: 1 perfil próprio identificado no mapa-mestre.
+  grupos:
+  - label: null
+    codigos:
+    - SS-019
